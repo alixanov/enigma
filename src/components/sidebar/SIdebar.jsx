@@ -187,16 +187,18 @@ const Navbar = () => {
             <HomeIcon fontSize="inherit" />
             <span>About</span>
           </NavButton>
-          <NavButton
+
+          {/* <NavButton
             component={NavLink}
-            to="/app/maps"
+            to="/app/gettingstarted"
             className={({ isActive }) => (isActive ? 'active' : '')}
             aria-label="Go to maps"
           >
             <MapIcon fontSize="inherit" />
             <span>Getting Started</span>
-          </NavButton>
-          <NavButton
+          </NavButton> */}
+
+          {/* <NavButton
             component={NavLink}
             to="/app/token"
             className={({ isActive }) => (isActive ? 'active' : '')}
@@ -204,7 +206,7 @@ const Navbar = () => {
           >
             <MapIcon fontSize="inherit" />
             <span>Tokenomics</span>
-          </NavButton>
+          </NavButton> */}
           <NavButton
             component={NavLink}
             to=""

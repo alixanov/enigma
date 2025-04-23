@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { Main, Layout, Map, Getting ,Info} from '../components';
+import { Main, Layout, Map, Getting, Info } from '../components';
 import { ThemeProvider, createTheme, useMediaQuery } from '@mui/material';
 import Footer from '../components/footer/Footer';
 import Card from '../components/card/Card';
@@ -51,9 +51,9 @@ const AppRoutes = () => {
           <Route path="app/maps" element={<Map />} />
         </Route>
       </Routes>
-      <Getting/>
-      <Card/>
-      <Footer/>
+      <Getting />
+      <Card />
+      <Footer />
     </ThemeProvider>
   );
 };
