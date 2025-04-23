@@ -24,7 +24,7 @@ const GettingContainer = styled(Box)(({ theme }) => ({
     left: 0,
     right: 0,
     bottom: 0,
-    backgroundColor: 'rgba(10, 10, 20, 0.24)', // Тёмный оверлей с лёгким синим оттенком
+    backgroundColor: 'rgba(10, 10, 20, 0.31)', // Тёмный оверлей с лёгким синим оттенком
     zIndex: 1,
   },
   [theme.breakpoints.down('sm')]: {
@@ -62,7 +62,7 @@ const SectionTitle = styled(Typography)(({ theme }) => ({
   color: '#fff',
   textAlign: 'center',
   marginBottom: '50px',
-  background: 'linear-gradient(45deg, #ff3232, #ff8c00)',
+  background: 'linear-gradient(45deg,rgb(255, 255, 255),rgb(255, 120, 52))',
   WebkitBackgroundClip: 'text',
   WebkitTextFillColor: 'transparent',
   textShadow: '0 0 20px rgba(255, 50, 50, 0.7), 0 0 40px rgba(255, 140, 0, 0.5)',

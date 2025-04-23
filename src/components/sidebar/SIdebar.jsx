@@ -207,7 +207,7 @@ const Navbar = () => {
           </NavButton>
           <NavButton
             component={NavLink}
-            to="/"
+            to=""
             className={({ isActive }) => (isActive ? 'active' : '')}
             aria-label="Join us"
           >
