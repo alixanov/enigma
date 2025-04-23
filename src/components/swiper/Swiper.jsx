@@ -7,11 +7,12 @@ import { gsap } from 'gsap';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import background from "../../assets/backiee-86553-landscape.jpg"
 
 // Данные для слайдера
 const swiperData = [
   {
-    image: 'https://backiee.com/static/wallpapers/1000x563/402806.jpg',
+    image: 'https://backiee.com/static/wallpapers/1000x563/394782.jpg',
     title: 'Portal to Aether',
     description: 'A gateway to celestial realms, pulsing with arcane energy.',
   },
@@ -26,7 +27,7 @@ const swiperData = [
     description: 'A sacred haven under a cosmic sky.',
   },
   {
-    image: 'https://backiee.com/static/wallpapers/1000x563/303387.jpg',
+    image: 'https://backiee.com/static/wallpapers/1000x563/415462.jpg',
     title: 'Shadow Enclave',
     description: 'Where darkness and light dance in eternal balance.',
   },
@@ -40,9 +41,10 @@ const swiperData = [
 // Styled Components
 const SwiperContainer = styled(Box)(({ theme }) => ({
   width: '100%',
-  maxWidth: '1400px',
+  maxWidth: '100%',
   margin: '0 auto',
-  padding: '40px 20px',
+  padding: '10px 3px',
+  marginBottom:"-50px",
   position: 'relative',
   zIndex: 10,
   [theme.breakpoints.down('md')]: {
@@ -51,11 +53,9 @@ const SwiperContainer = styled(Box)(({ theme }) => ({
   },
   [theme.breakpoints.down('sm')]: {
     maxWidth: '340px',
-    padding: '20px 10px 60px', // Учитывает футер
   },
   [theme.breakpoints.down('xs')]: {
     maxWidth: '100%',
-    padding: '15px 8px 60px',
   },
 }));
 
@@ -63,16 +63,11 @@ const SlideWrapper = styled(Box)(({ theme }) => ({
   position: 'relative',
   borderRadius: '16px',
   overflow: 'hidden',
-  background: 'rgba(255, 255, 255, 0.05)',
-  backdropFilter: 'blur(12px)',
-  border: '1px solid rgba(255, 223, 0, 0.3)',
-  boxShadow: '0 4px 15px rgba(255, 223, 0, 0.15)',
   transition: 'all 0.4s ease',
   margin: '0 auto',
   '&:hover': {
-    boxShadow: '0 8px 25px rgba(255, 223, 0, 0.4)',
-    border: '1px solid rgba(255, 223, 0, 0.9)',
-    transform: 'scale(1.05)',
+    boxShadow: '0 8px 25px rgba(229, 37, 37, 0.4)',
+    border: '1px solid rgba(249, 107, 107, 0.9)',
   },
   [theme.breakpoints.down('md')]: {
     maxWidth: '780px',
@@ -273,7 +268,7 @@ const SwiperComponent = () => {
           disableOnInteraction: false,
         }}
         navigation
-        pagination={{ clickable: true }}
+        pagination={false }
         breakpoints={{
           0: {
             slidesPerView: 1,
