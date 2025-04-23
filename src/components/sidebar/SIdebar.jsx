@@ -198,7 +198,7 @@ const Navbar = () => {
           </NavButton>
           <NavButton
             component={NavLink}
-            to="/app/maps"
+            to="/app/token"
             className={({ isActive }) => (isActive ? 'active' : '')}
             aria-label="Go to maps"
           >
