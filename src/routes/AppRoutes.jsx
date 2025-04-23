@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import { Main, Layout, Map, Getting ,Info} from '../components';
 import { ThemeProvider, createTheme, useMediaQuery } from '@mui/material';
 import Footer from '../components/footer/Footer';
+import Card from '../components/card/Card';
 
 // Обновляем тему для насыщенного красно-белого фона
 const theme = createTheme({
@@ -52,6 +53,8 @@ const AppRoutes = () => {
       </Routes>
       <Info />
       <Getting/>
+      <Card/>
+      <Footer/>
     </ThemeProvider>
   );
 };
