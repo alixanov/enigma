@@ -168,6 +168,9 @@ const CardBack = styled(CardFace)(({ theme }) => ({
   background: `linear-gradient(135deg, rgba(30, 0, 0, 0.9), rgba(60, 0, 0, 0.7)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect x="10" y="10" width="80" height="80" fill="none" stroke="rgba(255,215,0,0.3)" stroke-width="2"/></svg>') repeat`,
 }));
 
+
+
+
 const CardImage = styled(Box)(({ theme, image }) => ({
   width: '100%',
   height: '100%',
