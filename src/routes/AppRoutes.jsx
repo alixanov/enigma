@@ -51,7 +51,6 @@ const AppRoutes = () => {
           <Route path="app/maps" element={<Map />} />
         </Route>
       </Routes>
-      <Info />
       <Getting/>
       <Card/>
       <Footer/>
