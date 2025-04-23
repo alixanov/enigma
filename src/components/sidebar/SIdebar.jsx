@@ -193,6 +193,7 @@ const Navbar = () => {
             className={({ isActive }) => (isActive ? 'active' : '')}
             aria-label="Go to maps"
           >
+            
             <MapIcon fontSize="inherit" />
             <span>Getting Started</span>
           </NavButton>
