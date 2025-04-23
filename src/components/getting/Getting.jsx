@@ -3,7 +3,7 @@ import { styled } from '@mui/material/styles';
 import { Box, Typography, Card, CardContent as MuiCardContent, Grid, Button } from '@mui/material';
 import { gsap } from 'gsap';
 import gettingBackground from '../../assets/backiee-121554-landscape.jpg';
-import map from '../../assets/map.png';
+import map from '../../assets/assets_task_01jqytf21ze7f87jy9njb3nh3c_img_0.webp';
 import { Fireplace, PersonAdd, Explore, Group } from '@mui/icons-material';
 
 // Styled Components

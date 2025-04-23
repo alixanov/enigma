@@ -180,7 +180,7 @@ const Main = () => {
 
   // Разделение текста на слова для анимации
   const descriptionText =
-    'Enigma RPG is a multiplayer P2E game that runs as a Discord bot. Embark on quests, battle monsters, complete dungeons and raids, and build your character—all through interactive slash commands and button-based choices.';
+  "EnigmaRPG is a multiplayer P2E game that runs as a Discord bot. Dive into the world of dragons: embark on legendary quests, battle ferocious dragons, explore ancient lairs and treasure vaults, conquer epic raids, and forge your destiny as a Dragonlord—all through interactive slash commands and button-based choices."
   const words = descriptionText.split(' ').map((word, index) => (
     <span key={index} className="word" style={{ display: 'inline-block', margin: '0 4px' }}>
       {word}

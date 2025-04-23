@@ -3,7 +3,7 @@ import { styled } from '@mui/material/styles';
 import { Box, Typography } from '@mui/material';
 import Tilt from 'react-parallax-tilt';
 import { gsap } from 'gsap';
-import donutchart from '../../assets/07f825c772e3175a10ea30aae34a0996.png';
+import donutchart from '../../assets/ton.webp';
 import background from '../../assets/backiee-107146-landscape.jpg';
 
 // Стили

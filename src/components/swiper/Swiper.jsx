@@ -13,38 +13,40 @@ import background from "../../assets/backiee-86553-landscape.jpg"
 const swiperData = [
   {
     image: 'https://backiee.com/static/wallpapers/1000x563/394782.jpg',
-    title: 'Portal to Aether',
-    description: 'A gateway to celestial realms, pulsing with arcane energy.',
+    title: 'Dragon Vault',
+    description: 'A treasury guarded by ancient dragons, securing 5% for rewards and marketing.',
   },
   {
     image: 'https://backiee.com/static/wallpapers/1000x563/305173.jpg',
-    title: 'Mystic Ruins',
-    description: 'Ancient stones whisper secrets of forgotten magic.',
+    title: 'Flame Market',
+    description: 'Where fiery trades shape the economy, fueled by dragon wisdom.',
   },
   {
     image: 'https://backiee.com/static/wallpapers/1000x563/343827.jpg',
-    title: 'Starlit Sanctuary',
-    description: 'A sacred haven under a cosmic sky.',
+    title: 'Supply Nest',
+    description: '95% of tokens lie within the dragon’s domain, sustaining growth and power.',
   },
   {
     image: 'https://backiee.com/static/wallpapers/1000x563/415462.jpg',
-    title: 'Shadow Enclave',
-    description: 'Where darkness and light dance in eternal balance.',
+    title: 'Eternal Hoard',
+    description: 'A mystical accumulation of value with zero token fees.',
   },
   {
     image: 'https://backiee.com/static/wallpapers/1000x563/235640.jpg',
-    title: 'Crystal Spires',
-    description: 'Towers of radiant quartz channel primal forces.',
+    title: 'Infernal Exchange',
+    description: 'Where dragons oversee seamless trades, maintaining balance in the realm.',
   },
 ];
+
+
 
 // Styled Components
 const SwiperContainer = styled(Box)(({ theme }) => ({
   width: '100%',
   maxWidth: '100%',
   margin: '0 auto',
-  padding: '10px 3px',
-  marginBottom:"-50px",
+  padding: '20px 3px',
+  marginBottom:"-40px",
   position: 'relative',
   zIndex: 10,
   [theme.breakpoints.down('md')]: {
@@ -150,7 +152,7 @@ const SlideTitle = styled(Typography)(({ theme }) => ({
   fontSize: 'clamp(1.4rem, 2.5vw, 1.8rem)',
   fontWeight: 700,
   color: '#ffd700',
-  textShadow: '0 0 8px rgba(255, 223, 0, 0.5)',
+  textShadow: '0 0 8px rgba(117, 2, 2, 0.5)',
   marginBottom: '8px',
   [theme.breakpoints.down('md')]: {
     fontSize: 'clamp(1.3rem, 2.3vw, 1.6rem)',
