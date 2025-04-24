@@ -25,8 +25,14 @@ const GettingContainer = styled(Box)(({ theme }) => ({
     left: 0,
     right: 0,
     bottom: 0,
-    backgroundColor: 'rgba(10, 10, 20, 0.35)', // Тёмный оверлей
+    backgroundColor: 'rgba(10, 10, 20, 0.35)',
     zIndex: 1,
+  },
+  [theme.breakpoints.down('lg')]: {
+    padding: '50px 15px',
+  },
+  [theme.breakpoints.down('md')]: {
+    padding: '40px 15px',
   },
   [theme.breakpoints.down('sm')]: {
     padding: '40px 10px',
@@ -40,25 +46,33 @@ const Particle = styled(Box)({
   background: 'radial-gradient(circle, #ffd700, #ff4500, transparent)',
   borderRadius: '50%',
   zIndex: 2,
-  boxShadow: '0 0 20px #ffd700, 0 0 15px #ff4500', // Усиленное свечение
+  boxShadow: '0 0 20px #ffd700, 0 0 15px #ff4500',
 });
 
 const GlowRay = styled(Box)({
   position: 'absolute',
   width: '3px',
-  height: '120px', // Более длинные лучи
+  height: '120px',
   background: 'linear-gradient(to top, #ffd700, transparent)',
   borderRadius: '2px',
   zIndex: 2,
   transformOrigin: 'bottom',
-  boxShadow: '0 0 25px #ffd700', // Усиленное свечение
+  boxShadow: '0 0 25px #ffd700',
 });
 
 const ContentWrapper = styled(Box)(({ theme }) => ({
   position: 'relative',
   zIndex: 3,
   width: '100%',
-  maxWidth: '1400px', // Увеличено для левого края картинки
+  maxWidth: '1280px', // Изменено с 1400px на 1280px
+  boxSizing: 'border-box',
+  overflow: 'hidden',
+  [theme.breakpoints.down('lg')]: {
+    maxWidth: '960px',
+  },
+  [theme.breakpoints.down('md')]: {
+    maxWidth: '720px',
+  },
   [theme.breakpoints.down('sm')]: {
     maxWidth: '100%',
   },
@@ -66,10 +80,16 @@ const ContentWrapper = styled(Box)(({ theme }) => ({
 
 const MapImage = styled('img')(({ theme }) => ({
   width: '100%',
-  maxWidth: '450px', // Увеличен размер
+  maxWidth: '450px',
   borderRadius: '20px',
-  border: '3px solid rgba(255, 215, 0, 0.6)', // Золотая рамка
-  boxShadow: '0 0 30px rgba(255, 215, 0, 0.6), 0 0 50px rgba(255, 69, 0, 0.4)', // Усиленное свечение
+  border: '3px solid rgba(255, 215, 0, 0.6)',
+  boxShadow: '0 0 30px rgba(255, 215, 0, 0.6), 0 0 50px rgba(255, 69, 0, 0.4)',
+  [theme.breakpoints.down('lg')]: {
+    maxWidth: '400px',
+  },
+  [theme.breakpoints.down('md')]: {
+    maxWidth: '350px',
+  },
   [theme.breakpoints.down('sm')]: {
     maxWidth: '100%',
     marginBottom: '20px',
@@ -78,7 +98,7 @@ const MapImage = styled('img')(({ theme }) => ({
 
 const SectionTitle = styled(Typography)(({ theme }) => ({
   fontFamily: '"Exo 2", sans-serif',
-  fontSize: '4.5rem', // Увеличен размер
+  fontSize: '4.5rem',
   fontWeight: 900,
   color: '#fff',
   textAlign: 'center',
@@ -86,7 +106,14 @@ const SectionTitle = styled(Typography)(({ theme }) => ({
   background: 'linear-gradient(45deg, #ff4500, #ffd700)',
   WebkitBackgroundClip: 'text',
   WebkitTextFillColor: 'transparent',
-  textShadow: '0 0 30px rgba(255, 69, 0, 0.9), 0 0 60px rgba(255, 215, 0, 0.6)', // Усиленное свечение
+  textShadow: '0 0 30px rgba(255, 69, 0, 0.9), 0 0 60px rgba(255, 215, 0, 0.6)',
+  [theme.breakpoints.down('lg')]: {
+    fontSize: '4rem',
+  },
+  [theme.breakpoints.down('md')]: {
+    fontSize: '3.5rem',
+    marginBottom: '30px',
+  },
   [theme.breakpoints.down('sm')]: {
     fontSize: '2.8rem',
     marginBottom: '30px',
@@ -99,6 +126,12 @@ const DescriptionText = styled(Typography)(({ theme }) => ({
   color: '#e0e0e0',
   textAlign: 'center',
   marginBottom: '20px',
+  [theme.breakpoints.down('lg')]: {
+    fontSize: '1.2rem',
+  },
+  [theme.breakpoints.down('md')]: {
+    fontSize: '1.1rem',
+  },
   [theme.breakpoints.down('sm')]: {
     fontSize: '1rem',
   },
@@ -111,6 +144,12 @@ const GoldText = styled(Typography)(({ theme }) => ({
   textAlign: 'center',
   marginBottom: '30px',
   textShadow: '0 0 15px rgba(255, 215, 0, 0.6)',
+  [theme.breakpoints.down('lg')]: {
+    fontSize: '1.2rem',
+  },
+  [theme.breakpoints.down('md')]: {
+    fontSize: '1.1rem',
+  },
   [theme.breakpoints.down('sm')]: {
     fontSize: '1rem',
   },
@@ -127,10 +166,14 @@ const ActionButton = styled(Button)(({ theme }) => ({
   background: 'linear-gradient(45deg, #ff4500, #ffd700)',
   borderRadius: '30px',
   textTransform: 'none',
-  boxShadow: '0 0 25px rgba(255, 69, 0, 0.7), 0 0 35px rgba(255, 215, 0, 0.5)', // Усиленное свечение
+  boxShadow: '0 0 25px rgba(255, 69, 0, 0.7), 0 0 35px rgba(255, 215, 0, 0.5)',
   '&:hover': {
     background: 'linear-gradient(45deg, #ffd700, #ff4500)',
     boxShadow: '0 0 35px rgba(255, 69, 0, 0.9), 0 0 50px rgba(255, 215, 0, 0.7)',
+  },
+  [theme.breakpoints.down('lg')]: {
+    padding: '13px 26px',
+    fontSize: '1rem',
   },
   [theme.breakpoints.down('sm')]: {
     padding: '12px 24px',
@@ -139,19 +182,31 @@ const ActionButton = styled(Button)(({ theme }) => ({
 }));
 
 const StepCard = styled(Card)(({ theme }) => ({
-  background: 'rgba(20, 20, 30, 0.7)', // Glassmorphism
-  backdropFilter: 'blur(14px)', // Усиленное размытие
+  background: 'rgba(20, 20, 30, 0.7)',
+  backdropFilter: 'blur(14px)',
   borderRadius: '20px',
   border: '1px solid rgba(255, 215, 0, 0.4)',
-  boxShadow: '0 8px 24px rgba(0, 0, 0, 0.5), 0 0 25px rgba(255, 215, 0, 0.4)', // Усиленное свечение
+  boxShadow: '0 8px 24px rgba(0, 0, 0, 0.5), 0 0 25px rgba(255, 215, 0, 0.4)',
   transition: 'all 0.3s ease',
   transform: 'translateZ(0)',
+  minWidth: '280px', // Минимальная ширина карточки
+  maxWidth: '360px', // Максимальная ширина карточки
   '&:hover': {
     transform: 'translateY(-10px) scale(1.03)',
     boxShadow: '0 12px 32px rgba(0, 0, 0, 0.6), 0 0 35px rgba(255, 215, 0, 0.6)',
     borderColor: 'rgba(255, 215, 0, 0.7)',
   },
+  [theme.breakpoints.down('lg')]: {
+    minWidth: '260px',
+    maxWidth: '320px',
+  },
+  [theme.breakpoints.down('md')]: {
+    minWidth: '240px',
+    maxWidth: '300px',
+  },
   [theme.breakpoints.down('sm')]: {
+    minWidth: '100%',
+    maxWidth: '400px',
     margin: '10px auto',
   },
 }));
@@ -163,6 +218,9 @@ const StepNumber = styled(Typography)(({ theme }) => ({
   color: '#ffd700',
   marginBottom: '10px',
   textShadow: '0 0 15px rgba(255, 215, 0, 0.7)',
+  [theme.breakpoints.down('lg')]: {
+    fontSize: '2rem',
+  },
   [theme.breakpoints.down('sm')]: {
     fontSize: '1.8rem',
   },
@@ -174,6 +232,9 @@ const StepTitle = styled(Typography)(({ theme }) => ({
   fontWeight: 700,
   color: '#fff',
   marginBottom: '10px',
+  [theme.breakpoints.down('lg')]: {
+    fontSize: '1.3rem',
+  },
   [theme.breakpoints.down('sm')]: {
     fontSize: '1.2rem',
   },
@@ -183,6 +244,9 @@ const StepDescription = styled(Typography)(({ theme }) => ({
   fontFamily: '"Inter", sans-serif',
   fontSize: '0.95rem',
   color: '#e0e0e0',
+  [theme.breakpoints.down('lg')]: {
+    fontSize: '0.9rem',
+  },
   [theme.breakpoints.down('sm')]: {
     fontSize: '0.85rem',
   },
@@ -194,6 +258,11 @@ const StepIcon = styled(Box)(({ theme }) => ({
   '& svg': {
     fontSize: '2.2rem',
     filter: 'drop-shadow(0 0 12px rgba(255, 215, 0, 0.6))',
+  },
+  [theme.breakpoints.down('lg')]: {
+    '& svg': {
+      fontSize: '2rem',
+    },
   },
   [theme.breakpoints.down('sm')]: {
     '& svg': {
@@ -259,8 +328,8 @@ const Getting = () => {
   ));
 
   useEffect(() => {
-    const particleCount = 50; // Увеличено для роскоши
-    const rayCount = 10; // Больше лучей
+    const particleCount = 50;
+    const rayCount = 10;
     const particles = [];
 
     // Создание частиц (искр)
@@ -278,7 +347,7 @@ const Getting = () => {
       const x = (clientX / innerWidth - 0.5) * 30;
       const y = (clientY / innerHeight - 0.5) * 30;
       gsap.to(mapRef.current, {
-        x: x * 0.5, // Лёгкий параллакс
+        x: x * 0.5,
         y: y * 0.5,
         rotation: x * 0.05,
         duration: 0.5,
@@ -368,22 +437,6 @@ const Getting = () => {
       }
     );
 
-    // Анимация частиц
-    particles.forEach((particle, index) => {
-      gsap.to(particle, {
-        x: () => Math.random() * 200 - 100,
-        y: () => Math.random() * 200 - 100,
-        opacity: () => Math.random() * 0.5 + 0.3,
-        scale: () => Math.random() * 0.5 + 0.5,
-        rotation: () => Math.random() * 360,
-        duration: 3.5,
-        repeat: -1,
-        yoyo: true,
-        ease: 'sine.inOut',
-        delay: index * 0.06,
-      });
-    });
-
     // Анимация картинки
     gsap.fromTo(
       mapRef.current,
@@ -448,16 +501,16 @@ const Getting = () => {
         <GoldText ref={goldRef}>{goldWords}</GoldText>
         <ActionButton ref={buttonRef}>Join the Adventure</ActionButton>
         <Grid container spacing={3} justifyContent="flex-start">
-          <Grid item xs={12} md={4} sx={{ display: 'flex', justifyContent: 'flex-start' }}>
+          <Grid item xs={12} md={4} lg={4} sx={{ display: 'flex', justifyContent: 'flex-start' }}>
             <MapImage src={map} alt="Map" ref={mapRef} />
           </Grid>
-          <Grid item xs={12} md={8}>
+          <Grid item xs={12} md={8} lg={8}>
             <Grid container spacing={3}>
               {steps.slice(0, 2).map((step, index) => (
-                <Grid item xs={12} sm={6} key={index}>
+                <Grid item xs={12} sm={6} lg={6} key={index}>
                   <StepCard
                     ref={(el) => (cardRefs.current[index] = el)}
-                    sx={{ maxWidth: 400, margin: '0 auto' }}
+                    sx={{ maxWidth: 360, minWidth: 280, margin: '0 auto' }}
                   >
                     <CustomCardContent>
                       <StepIcon>{step.icon}</StepIcon>
@@ -471,10 +524,10 @@ const Getting = () => {
             </Grid>
             <Grid container spacing={3} sx={{ mt: 3, justifyContent: 'flex-end' }}>
               {steps.slice(2, 4).map((step, index) => (
-                <Grid item xs={12} sm={6} key={index + 2}>
+                <Grid item xs={12} sm={6} lg={6} key={index + 2}>
                   <StepCard
                     ref={(el) => (cardRefs.current[index + 2] = el)}
-                    sx={{ maxWidth: 400, margin: '0 auto' }}
+                    sx={{ maxWidth: 360, minWidth: 280, margin: '0 auto' }}
                   >
                     <CustomCardContent>
                       <StepIcon>{step.icon}</StepIcon>
