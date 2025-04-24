@@ -100,7 +100,7 @@ const ContentWrapper = styled(Box)(({ theme }) => ({
 const MapImage = styled('img')(({ theme }) => ({
   width: '100%',
   maxWidth: '25vw',
-  marginLeft:"180px",
+  marginLeft:"100px",
   borderRadius: '1.5vw',
   border: '3px solid rgba(255, 215, 0, 0.6)',
   boxShadow: '0 0 2vw rgba(255, 215, 0, 0.6), 0 0 3vw rgba(255, 69, 0, 0.4)',
