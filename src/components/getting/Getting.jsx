@@ -230,6 +230,10 @@ const StepCard = styled(Card)(({ theme }) => ({
   boxShadow: '0 0.5vw 1.5vw rgba(0, 0, 0, 0.5), 0 0 1.5vw rgba(255, 215, 0, 0.4)',
   transition: 'all 0.3s ease',
   transform: 'translateZ(0)',
+  width: '20vw',
+  minHeight: '20vw',
+  display: 'flex',
+  flexDirection: 'column',
   '&:hover': {
     transform: 'translateY(-0.6vw) scale(1.03)',
     boxShadow: '0 0.8vw 2vw rgba(0, 0, 0, 0.6), 0 0 2vw rgba(255, 215, 0, 0.6)',
@@ -239,6 +243,8 @@ const StepCard = styled(Card)(({ theme }) => ({
     margin: '1vw auto',
   },
   [theme.breakpoints.down('sm')]: {
+    width: '80vw',
+    minHeight: '40vw',
     margin: '2vw auto',
     borderRadius: '3vw',
     border: '1px solid rgba(255, 215, 0, 0.5)',
@@ -249,6 +255,8 @@ const StepCard = styled(Card)(({ theme }) => ({
     },
   },
   '@media (min-width: 1920px)': {
+    width: '400px',
+    minHeight: '400px',
     borderRadius: '25px',
     boxShadow: '0 10px 30px rgba(0, 0, 0, 0.6), 0 0 30px rgba(255, 215, 0, 0.5)',
     '&:hover': {
@@ -302,6 +310,8 @@ const StepDescription = styled(Typography)(({ theme }) => ({
   fontFamily: '"Inter", sans-serif',
   fontSize: '0.9vw',
   color: '#e0e0e0',
+  wordWrap: 'break-word',
+  overflow: 'hidden',
   [theme.breakpoints.down('md')]: {
     fontSize: '1.1vw',
   },
@@ -342,13 +352,18 @@ const StepIcon = styled(Box)(({ theme }) => ({
 }));
 
 const CustomCardContent = styled(MuiCardContent)(({ theme }) => ({
-  padding: '1.5vw',
+  padding: '2vw',
   textAlign: 'center',
+  display: 'flex',
+  flexDirection: 'column',
+  flexGrow: 1,
+  justifyContent: 'space-between',
+  height: '100%',
   [theme.breakpoints.down('sm')]: {
     padding: '4vw',
   },
   '@media (min-width: 1920px)': {
-    padding: '25px',
+    padding: '30px',
   },
 }));
 
@@ -586,11 +601,11 @@ const Getting = () => {
           spacing={{ xs: 2, sm: 2, md: 3 }}
           justifyContent="space-between"
           alignItems="center"
-          sx={{ marginLeft: { xs: '30px', sm: '0px' } }}
+          sx={{ marginLeft: { xs: '25px', sm: '0px' } }}
         >
 
           <Grid item xs={12} md={4} lg={3} sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'flex-start' } }}>
-            <MapImage src={map} alt="Map" ref={mapRef}
+            <MapImage src={map} alt="Map" ref={mapRef} 
             
               sx={{ marginLeft: { xs: '0px', sm: '100px' } }}
 
@@ -600,10 +615,7 @@ const Getting = () => {
             <Grid container spacing={{ xs: 2, sm: 2, md: 2 }} sx={{ maxWidth: { xs: '90vw', md: '50vw' }, flexWrap: 'wrap' }}>
               {steps.map((step, index) => (
                 <Grid item xs={12} sm={6} md={6} lg={6} key={index}>
-                  <StepCard
-                    ref={(el) => (cardRefs.current[index] = el)}
-                    sx={{ maxWidth: { xs: '80vw', md: '20vw' }, margin: '0 auto' }}
-                  >
+                  <StepCard ref={(el) => (cardRefs.current[index] = el)}>
                     <CustomCardContent>
                       <StepIcon>{step.icon}</StepIcon>
                       <StepNumber variant="h3">{step.number}</StepNumber>
