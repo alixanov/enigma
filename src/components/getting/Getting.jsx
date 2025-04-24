@@ -12,7 +12,7 @@ const GettingContainer = styled(Box)(({ theme }) => ({
   background: `url(${gettingBackground}) no-repeat center center`,
   backgroundSize: 'cover',
   minHeight: '100vh',
-  padding: '4vw 2vw',
+  padding: '60px 20px',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
@@ -25,74 +25,40 @@ const GettingContainer = styled(Box)(({ theme }) => ({
     left: 0,
     right: 0,
     bottom: 0,
-    backgroundColor: 'rgba(10, 10, 20, 0.35)',
+    backgroundColor: 'rgba(10, 10, 20, 0.35)', // Тёмный оверлей
     zIndex: 1,
   },
-  [theme.breakpoints.down('md')]: {
-    padding: '3vw 1.5vw',
-  },
   [theme.breakpoints.down('sm')]: {
-    padding: '4vw 2vw',
-    minHeight: 'auto',
-  },
-  '@media (min-width: 1920px)': {
-    padding: '80px 40px',
+    padding: '40px 10px',
   },
 }));
 
-const Particle = styled(Box)(({ theme }) => ({
+const Particle = styled(Box)({
   position: 'absolute',
-  width: '0.5vw',
-  height: '0.5vw',
+  width: '8px',
+  height: '8px',
   background: 'radial-gradient(circle, #ffd700, #ff4500, transparent)',
   borderRadius: '50%',
   zIndex: 2,
-  boxShadow: '0 0 1.5vw #ffd700, 0 0 1vw #ff4500',
-  [theme.breakpoints.down('sm')]: {
-    width: '3px',
-    height: '3px',
-    boxShadow: '0 0 8px #ffd700, 0 0 6px #ff4500',
-  },
-  '@media (min-width: 1920px)': {
-    width: '10px',
-    height: '10px',
-    boxShadow: '0 0 25px #ffd700, 0 0 20px #ff4500',
-  },
-}));
+  boxShadow: '0 0 20px #ffd700, 0 0 15px #ff4500', // Усиленное свечение
+});
 
-const GlowRay = styled(Box)(({ theme }) => ({
+const GlowRay = styled(Box)({
   position: 'absolute',
-  width: '0.2vw',
-  height: '8vw',
+  width: '3px',
+  height: '120px', // Более длинные лучи
   background: 'linear-gradient(to top, #ffd700, transparent)',
   borderRadius: '2px',
   zIndex: 2,
   transformOrigin: 'bottom',
-  boxShadow: '0 0 1.5vw #ffd700',
-  [theme.breakpoints.down('sm')]: {
-    width: '1.5px',
-    height: '60px',
-    boxShadow: '0 0 10px #ffd700',
-  },
-  '@media (min-width: 1920px)': {
-    width: '4px',
-    height: '150px',
-    boxShadow: '0 0 30px #ffd700',
-  },
-}));
+  boxShadow: '0 0 25px #ffd700', // Усиленное свечение
+});
 
 const ContentWrapper = styled(Box)(({ theme }) => ({
   position: 'relative',
   zIndex: 3,
   width: '100%',
-  maxWidth: '1920px',
-  margin: '0 auto',
-  [theme.breakpoints.down('lg')]: {
-    maxWidth: '90vw',
-  },
-  [theme.breakpoints.down('md')]: {
-    maxWidth: '95vw',
-  },
+  maxWidth: '1400px', // Увеличено для левого края картинки
   [theme.breakpoints.down('sm')]: {
     maxWidth: '100%',
   },
@@ -100,209 +66,125 @@ const ContentWrapper = styled(Box)(({ theme }) => ({
 
 const MapImage = styled('img')(({ theme }) => ({
   width: '100%',
-  maxWidth: '25vw',
-  borderRadius: '1.5vw',
-  border: '3px solid rgba(255, 215, 0, 0.6)',
-  boxShadow: '0 0 2vw rgba(255, 215, 0, 0.6), 0 0 3vw rgba(255, 69, 0, 0.4)',
-  [theme.breakpoints.down('md')]: {
-    maxWidth: '40vw',
-  },
+  maxWidth: '450px', // Увеличен размер
+  borderRadius: '20px',
+  border: '3px solid rgba(255, 215, 0, 0.6)', // Золотая рамка
+  boxShadow: '0 0 30px rgba(255, 215, 0, 0.6), 0 0 50px rgba(255, 69, 0, 0.4)', // Усиленное свечение
   [theme.breakpoints.down('sm')]: {
-    maxWidth: '80vw',
-    marginBottom: '4vw',
-    borderRadius: '3vw',
-    border: '2px solid rgba(255, 215, 0, 0.6)',
-    boxShadow: '0 0 4vw rgba(255, 215, 0, 0.5), 0 0 6vw rgba(255, 69, 0, 0.3)',
-  },
-  '@media (min-width: 1920px)': {
-    maxWidth: '600px',
-    borderRadius: '25px',
-    boxShadow: '0 0 40px rgba(255, 215, 0, 0.7), 0 0 60px rgba(255, 69, 0, 0.5)',
+    maxWidth: '100%',
+    marginBottom: '20px',
   },
 }));
 
 const SectionTitle = styled(Typography)(({ theme }) => ({
   fontFamily: '"Exo 2", sans-serif',
-  fontSize: '4vw',
+  fontSize: '4.5rem', // Увеличен размер
   fontWeight: 900,
   color: '#fff',
   textAlign: 'center',
-  marginBottom: '2.5vw',
+  marginBottom: '40px',
   background: 'linear-gradient(45deg, #ff4500, #ffd700)',
   WebkitBackgroundClip: 'text',
   WebkitTextFillColor: 'transparent',
-  textShadow: '0 0 2vw rgba(255, 69, 0, 0.9), 0 0 4vw rgba(255, 215, 0, 0.6)',
-  [theme.breakpoints.down('lg')]: {
-    fontSize: '3.5vw',
-  },
-  [theme.breakpoints.down('md')]: {
-    fontSize: '5vw',
-    marginBottom: '2vw',
-  },
+  textShadow: '0 0 30px rgba(255, 69, 0, 0.9), 0 0 60px rgba(255, 215, 0, 0.6)', // Усиленное свечение
   [theme.breakpoints.down('sm')]: {
-    fontSize: '8vw',
-    marginBottom: '4vw',
-  },
-  '@media (min-width: 1920px)': {
-    fontSize: '5.5rem',
-    marginBottom: '50px',
+    fontSize: '2.8rem',
+    marginBottom: '30px',
   },
 }));
 
 const DescriptionText = styled(Typography)(({ theme }) => ({
   fontFamily: '"Inter", sans-serif',
-  fontSize: '1.2vw',
+  fontSize: '1.3rem',
   color: '#e0e0e0',
   textAlign: 'center',
-  marginBottom: '1.5vw',
-  [theme.breakpoints.down('md')]: {
-    fontSize: '1.5vw',
-  },
+  marginBottom: '20px',
   [theme.breakpoints.down('sm')]: {
-    fontSize: '3.5vw',
-    marginBottom: '3vw',
-  },
-  '@media (min-width: 1920px)': {
-    fontSize: '1.5rem',
-    marginBottom: '25px',
+    fontSize: '1rem',
   },
 }));
 
 const GoldText = styled(Typography)(({ theme }) => ({
   fontFamily: '"Inter", sans-serif',
-  fontSize: '1.2vw',
+  fontSize: '1.3rem',
   color: '#ffd700',
   textAlign: 'center',
-  marginBottom: '2vw',
-  textShadow: '0 0 1vw rgba(255, 215, 0, 0.6)',
-  [theme.breakpoints.down('md')]: {
-    fontSize: '1.5vw',
-  },
+  marginBottom: '30px',
+  textShadow: '0 0 15px rgba(255, 215, 0, 0.6)',
   [theme.breakpoints.down('sm')]: {
-    fontSize: '3.5vw',
-    marginBottom: '4vw',
-  },
-  '@media (min-width: 1920px)': {
-    fontSize: '1.5rem',
-    marginBottom: '40px',
+    fontSize: '1rem',
   },
 }));
 
 const ActionButton = styled(Button)(({ theme }) => ({
   display: 'block',
-  margin: '0 auto 2.5vw',
-  padding: '1vw 2vw',
+  margin: '0 auto 40px',
+  padding: '14px 28px',
   fontFamily: '"Exo 2", sans-serif',
-  fontSize: '1vw',
+  fontSize: '1.1rem',
   fontWeight: 700,
   color: '#fff',
   background: 'linear-gradient(45deg, #ff4500, #ffd700)',
-  borderRadius: '2vw',
+  borderRadius: '30px',
   textTransform: 'none',
-  boxShadow: '0 0 1.5vw rgba(255, 69, 0, 0.7), 0 0 2vw rgba(255, 215, 0, 0.5)',
+  boxShadow: '0 0 25px rgba(255, 69, 0, 0.7), 0 0 35px rgba(255, 215, 0, 0.5)', // Усиленное свечение
   '&:hover': {
     background: 'linear-gradient(45deg, #ffd700, #ff4500)',
-    boxShadow: '0 0 2vw rgba(255, 69, 0, 0.9), 0 0 3vw rgba(255, 215, 0, 0.7)',
-  },
-  [theme.breakpoints.down('md')]: {
-    padding: '1.2vw 2.4vw',
-    fontSize: '1.2vw',
+    boxShadow: '0 0 35px rgba(255, 69, 0, 0.9), 0 0 50px rgba(255, 215, 0, 0.7)',
   },
   [theme.breakpoints.down('sm')]: {
-    padding: '3vw 6vw',
-    fontSize: '3.5vw',
-    borderRadius: '4vw',
-    marginBottom: '4vw',
-  },
-  '@media (min-width: 1920px)': {
-    padding: '16px 32px',
-    fontSize: '1.2rem',
-    borderRadius: '35px',
-    marginBottom: '50px',
+    padding: '12px 24px',
+    fontSize: '0.9rem',
   },
 }));
 
 const StepCard = styled(Card)(({ theme }) => ({
-  background: 'rgba(20, 20, 30, 0.7)',
-  backdropFilter: 'blur(14px)',
-  borderRadius: '16px',
+  background: 'rgba(20, 20, 30, 0.7)', // Glassmorphism
+  backdropFilter: 'blur(14px)', // Усиленное размытие
+  borderRadius: '20px',
   border: '1px solid rgba(255, 215, 0, 0.4)',
-  boxShadow: '0 0.5vw 1.5vw rgba(0, 0, 0, 0.5), 0 0 1.5vw rgba(255, 215, 0, 0.4)',
+  boxShadow: '0 8px 24px rgba(0, 0, 0, 0.5), 0 0 25px rgba(255, 215, 0, 0.4)', // Усиленное свечение
   transition: 'all 0.3s ease',
   transform: 'translateZ(0)',
-  width: '350px',
-  height: '300px',
-  display: 'flex',
-  flexDirection: 'column',
   '&:hover': {
-    transform: 'translateY(-8px) scale(1.03)',
-    boxShadow: '0 12px 24px rgba(0, 0, 0, 0.6), 0 0 24px rgba(255, 215, 0, 0.6)',
+    transform: 'translateY(-10px) scale(1.03)',
+    boxShadow: '0 12px 32px rgba(0, 0, 0, 0.6), 0 0 35px rgba(255, 215, 0, 0.6)',
     borderColor: 'rgba(255, 215, 0, 0.7)',
   },
   [theme.breakpoints.down('sm')]: {
-    width: '90%',
-    maxWidth: '350px',
-    height: 'auto',
-    minHeight: '300px',
-    margin: '16px auto',
-    borderRadius: '12px',
-    border: '1px solid rgba(255, 215, 0, 0.5)',
-    boxShadow: '0 0 16px rgba(0, 0, 0, 0.4), 0 0 12px rgba(255, 215, 0, 0.3)',
-    '&:hover': {
-      transform: 'translateY(-8px) scale(1.02)',
-      boxShadow: '0 16px 24px rgba(0, 0, 0, 0.5), 0 0 16px rgba(255, 215, 0, 0.5)',
-    },
+    margin: '10px auto',
   },
 }));
 
 const StepNumber = styled(Typography)(({ theme }) => ({
   fontFamily: '"Exo 2", sans-serif',
-  fontSize: '24px',
+  fontSize: '2.2rem',
   fontWeight: 800,
   color: '#ffd700',
-  marginBottom: '8px',
-  textShadow: '0 0 8px rgba(255, 215, 0, 0.7)',
+  marginBottom: '10px',
+  textShadow: '0 0 15px rgba(255, 215, 0, 0.7)',
   [theme.breakpoints.down('sm')]: {
-    fontSize: '20px',
-    marginBottom: '8px',
-  },
-  '@media (min-width: 1920px)': {
-    fontSize: '28px',
-    marginBottom: '12px',
-    textShadow: '0 0 12px rgba(255, 215, 0, 0.8)',
+    fontSize: '1.8rem',
   },
 }));
 
 const StepTitle = styled(Typography)(({ theme }) => ({
   fontFamily: '"Exo 2", sans-serif',
-  fontSize: '18px',
+  fontSize: '1.4rem',
   fontWeight: 700,
   color: '#fff',
-  marginBottom: '8px',
+  marginBottom: '10px',
   [theme.breakpoints.down('sm')]: {
-    fontSize: '16px',
-    marginBottom: '8px',
-  },
-  '@media (min-width: 1920px)': {
-    fontSize: '20px',
-    marginBottom: '12px',
+    fontSize: '1.2rem',
   },
 }));
 
 const StepDescription = styled(Typography)(({ theme }) => ({
   fontFamily: '"Inter", sans-serif',
-  fontSize: '14px',
+  fontSize: '0.95rem',
   color: '#e0e0e0',
-  wordWrap: 'break-word',
-  overflow: 'hidden',
-  maxHeight: '100px',
-  lineHeight: '1.4',
   [theme.breakpoints.down('sm')]: {
-    fontSize: '13px',
-    maxHeight: '120px',
-  },
-  '@media (min-width: 1920px)': {
-    fontSize: '15px',
+    fontSize: '0.85rem',
   },
 }));
 
@@ -310,37 +192,20 @@ const StepIcon = styled(Box)(({ theme }) => ({
   color: '#ffd700',
   marginBottom: '12px',
   '& svg': {
-    fontSize: '24px',
-    filter: 'drop-shadow(0 0 6px rgba(255, 215, 0, 0.6))',
+    fontSize: '2.2rem',
+    filter: 'drop-shadow(0 0 12px rgba(255, 215, 0, 0.6))',
   },
   [theme.breakpoints.down('sm')]: {
-    marginBottom: '8px',
     '& svg': {
-      fontSize: '20px',
-      filter: 'drop-shadow(0 0 4px rgba(255, 215, 0, 0.5))',
-    },
-  },
-  '@media (min-width: 1920px)': {
-    marginBottom: '16px',
-    '& svg': {
-      fontSize: '28px',
-      filter: 'drop-shadow(0 0 8px rgba(255, 215, 0, 0.7))',
+      fontSize: '1.8rem',
     },
   },
 }));
 
-const CustomCardContent = styled(MuiCardContent)(({ theme }) => ({
+const CustomCardContent = styled(MuiCardContent)({
   padding: '20px',
   textAlign: 'center',
-  display: 'flex',
-  flexDirection: 'column',
-  flexGrow: 1,
-  justifyContent: 'space-between',
-  height: '100%',
-  [theme.breakpoints.down('sm')]: {
-    padding: '16px',
-  },
-}));
+});
 
 const Getting = () => {
   const containerRef = useRef(null);
@@ -379,24 +244,26 @@ const Getting = () => {
     },
   ];
 
+  // Разбиваем текст на слова
   const descriptionText = "Embark on an epic journey with our Discord bot!";
   const goldText = "Collect gold, XP, and legendary loot to rise to glory!";
   const descWords = descriptionText.split(' ').map((word, index) => (
-    <span key={index} className="word" style={{ display: 'inline-block', marginRight: '0.5vw' }}>
+    <span key={index} className="word" style={{ display: 'inline-block', marginRight: '6px' }}>
       {word}
     </span>
   ));
   const goldWords = goldText.split(' ').map((word, index) => (
-    <span key={index} className="word" style={{ display: 'inline-block', marginRight: '0.5vw' }}>
+    <span key={index} className="word" style={{ display: 'inline-block', marginRight: '6px' }}>
       {word}
     </span>
   ));
 
   useEffect(() => {
-    const particleCount = 60;
-    const rayCount = 12;
+    const particleCount = 50; // Увеличено для роскоши
+    const rayCount = 10; // Больше лучей
     const particles = [];
 
+    // Создание частиц (искр)
     for (let i = 0; i < particleCount; i++) {
       const particle = document.createElement('div');
       particle.className = 'particle';
@@ -404,23 +271,24 @@ const Getting = () => {
       particles.push(particle);
     }
 
+    // Интерактивное свечение и параллакс для картинки
     const handleMouseMove = (e) => {
       const { clientX, clientY } = e;
       const { innerWidth, innerHeight } = window;
-      const x = (clientX / innerWidth - 0.5) * 40;
-      const y = (clientY / innerHeight - 0.5) * 40;
+      const x = (clientX / innerWidth - 0.5) * 30;
+      const y = (clientY / innerHeight - 0.5) * 30;
       gsap.to(mapRef.current, {
-        x: x * 0.6,
-        y: y * 0.6,
-        rotation: x * 0.06,
-        duration: 0.6,
+        x: x * 0.5, // Лёгкий параллакс
+        y: y * 0.5,
+        rotation: x * 0.05,
+        duration: 0.5,
         ease: 'power2.out',
       });
       rayRefs.current.forEach((ray) => {
         gsap.to(ray, {
           x,
           y,
-          duration: 0.6,
+          duration: 0.5,
           ease: 'power2.out',
         });
       });
@@ -428,112 +296,119 @@ const Getting = () => {
 
     window.addEventListener('mousemove', handleMouseMove);
 
+    // Анимация лучей
     rayRefs.current.forEach((ray, index) => {
       gsap.to(ray, {
         rotation: index % 2 === 0 ? 360 : -360,
-        opacity: 0.5 + Math.random() * 0.4,
-        duration: 5 + Math.random() * 2,
+        opacity: 0.5 + Math.random() * 0.3,
+        duration: 4 + Math.random() * 2,
         repeat: -1,
         ease: 'none',
-        delay: index * 0.5,
+        delay: index * 0.4,
       });
     });
 
+    // Анимация заголовка
     gsap.fromTo(
       titleRef.current,
-      { opacity: 0, y: -100, scale: 0.5, filter: 'blur(6px)' },
+      { opacity: 0, y: -80, scale: 0.6, filter: 'blur(5px)' },
       {
         opacity: 1,
         y: 0,
         scale: 1,
         filter: 'blur(0px)',
-        duration: 2,
+        duration: 1.8,
         ease: 'power4.out',
       }
     );
 
+    // Анимация описания
     const descWords = descRef.current?.querySelectorAll('.word');
     gsap.fromTo(
       descWords,
-      { opacity: 0, y: 25, filter: 'blur(3px)' },
+      { opacity: 0, y: 20, filter: 'blur(2px)' },
       {
         opacity: 1,
         y: 0,
         filter: 'blur(0px)',
-        duration: 0.9,
-        stagger: 0.04,
+        duration: 0.8,
+        stagger: 0.03,
         ease: 'power3.out',
-        delay: 0.7,
+        delay: 0.6,
       }
     );
 
+    // Анимация секции про золото
     const goldWords = goldRef.current?.querySelectorAll('.word');
     gsap.fromTo(
       goldWords,
-      { opacity: 0, y: 25, filter: 'blur(3px)' },
+      { opacity: 0, y: 20, filter: 'blur(2px)' },
       {
         opacity: 1,
         y: 0,
         filter: 'blur(0px)',
-        duration: 0.9,
-        stagger: 0.04,
+        duration: 0.8,
+        stagger: 0.03,
         ease: 'power3.out',
-        delay: 1,
+        delay: 0.9,
       }
     );
 
+    // Анимация кнопки
     gsap.fromTo(
       buttonRef.current,
-      { opacity: 0, y: 40, scale: 0.85 },
+      { opacity: 0, y: 30, scale: 0.9 },
       {
         opacity: 1,
         y: 0,
         scale: 1,
-        duration: 1.2,
+        duration: 1,
         ease: 'power3.out',
-        delay: 1.3,
+        delay: 1.2,
       }
     );
 
-    const vwToPx = (vw) => (vw * window.innerWidth) / 100;
+    // Анимация частиц
     particles.forEach((particle, index) => {
       gsap.to(particle, {
-        x: () => Math.random() * vwToPx(15) - vwToPx(7.5),
-        y: () => Math.random() * vwToPx(15) - vwToPx(7.5),
-        opacity: () => Math.random() * 0.6 + 0.4,
-        scale: () => Math.random() * 0.6 + 0.6,
+        x: () => Math.random() * 200 - 100,
+        y: () => Math.random() * 200 - 100,
+        opacity: () => Math.random() * 0.5 + 0.3,
+        scale: () => Math.random() * 0.5 + 0.5,
         rotation: () => Math.random() * 360,
-        duration: 4,
+        duration: 3.5,
         repeat: -1,
         yoyo: true,
         ease: 'sine.inOut',
-        delay: index * 0.07,
+        delay: index * 0.06,
       });
     });
 
+    // Анимация картинки
     gsap.fromTo(
       mapRef.current,
-      { opacity: 0, x: -200, scale: 0.7, filter: 'blur(12px)' },
+      { opacity: 0, x: -150, scale: 0.8, filter: 'blur(10px)' },
       {
         opacity: 1,
         x: 0,
         scale: 1,
         filter: 'blur(0px)',
-        duration: 1.7,
+        duration: 1.5,
         ease: 'power4.out',
-        delay: 1.6,
+        delay: 1.5,
       }
     );
 
+    // Анимация карточек
     cardRefs.current.forEach((card, index) => {
       gsap.fromTo(
         card,
         {
           opacity: 0,
-          y: 200,
-          scale: 0.85,
-          rotation: index % 2 === 0 ? 20 : -20,
-          filter: 'blur(12px)',
+          y: 150,
+          scale: 0.9,
+          rotation: index % 2 === 0 ? 15 : -15,
+          filter: 'blur(10px)',
         },
         {
           opacity: 1,
@@ -541,13 +416,14 @@ const Getting = () => {
           scale: 1,
           rotation: 0,
           filter: 'blur(0px)',
-          duration: 1.2,
+          duration: 1,
           ease: 'power3.out',
-          delay: index * 0.25 + 2.2,
+          delay: index * 0.2 + 2,
         }
       );
     });
 
+    // Cleanup
     return () => {
       particles.forEach((particle) => particle.remove());
       window.removeEventListener('mousemove', handleMouseMove);
@@ -557,11 +433,11 @@ const Getting = () => {
 
   return (
     <GettingContainer className="getting__container" ref={containerRef}>
-      {[...Array(12)].map((_, index) => (
+      {[...Array(10)].map((_, index) => (
         <GlowRay
           key={`ray-${index}`}
           ref={(el) => (rayRefs.current[index] = el)}
-          sx={{ left: `${(index * 8 + 4)}%`, bottom: 0 }}
+          sx={{ left: `${(index * 10 + 5)}%`, bottom: 0 }}
         />
       ))}
       <ContentWrapper>
@@ -571,24 +447,35 @@ const Getting = () => {
         <DescriptionText ref={descRef}>{descWords}</DescriptionText>
         <GoldText ref={goldRef}>{goldWords}</GoldText>
         <ActionButton ref={buttonRef}>Join the Adventure</ActionButton>
-        <Grid
-          container
-          spacing={{ xs: 2, sm: 2, md: 3 }}
-          justifyContent="space-between"
-          alignItems="center"
-          sx={{ marginLeft: { xs: '25px', sm: '0px' } }}
-        >
-
-          <Grid item xs={12} md={4} lg={3} sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'flex-start' } }}>
-            <MapImage src={map} alt="Map" ref={mapRef}
-              sx={{ marginLeft: { xs: '0px', sm: '100px' } }}
-            />
+        <Grid container spacing={3} justifyContent="flex-start">
+          <Grid item xs={12} md={4} sx={{ display: 'flex', justifyContent: 'flex-start' }}>
+            <MapImage src={map} alt="Map" ref={mapRef} />
           </Grid>
-          <Grid item xs={12} md={8} lg={9} sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'flex-end' } }}>
-            <Grid container spacing={{ xs: 2, sm: 2, md: 2 }} sx={{ maxWidth: { xs: '90vw', md: '50vw' }, flexWrap: 'wrap' }}>
-              {steps.map((step, index) => (
-                <Grid item xs={12} sm={6} md={6} lg={6} key={index}>
-                  <StepCard ref={(el) => (cardRefs.current[index] = el)}>
+          <Grid item xs={12} md={8}>
+            <Grid container spacing={3}>
+              {steps.slice(0, 2).map((step, index) => (
+                <Grid item xs={12} sm={6} key={index}>
+                  <StepCard
+                    ref={(el) => (cardRefs.current[index] = el)}
+                    sx={{ maxWidth: 400, margin: '0 auto' }}
+                  >
+                    <CustomCardContent>
+                      <StepIcon>{step.icon}</StepIcon>
+                      <StepNumber variant="h3">{step.number}</StepNumber>
+                      <StepTitle variant="h4">{step.title}</StepTitle>
+                      <StepDescription variant="body1">{step.description}</StepDescription>
+                    </CustomCardContent>
+                  </StepCard>
+                </Grid>
+              ))}
+            </Grid>
+            <Grid container spacing={3} sx={{ mt: 3, justifyContent: 'flex-end' }}>
+              {steps.slice(2, 4).map((step, index) => (
+                <Grid item xs={12} sm={6} key={index + 2}>
+                  <StepCard
+                    ref={(el) => (cardRefs.current[index + 2] = el)}
+                    sx={{ maxWidth: 400, margin: '0 auto' }}
+                  >
                     <CustomCardContent>
                       <StepIcon>{step.icon}</StepIcon>
                       <StepNumber variant="h3">{step.number}</StepNumber>
