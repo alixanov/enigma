@@ -17,6 +17,7 @@ body {
   margin: 0 auto;
   position: relative;
   overflow-x: hidden;
+  /* max-width: 1920px; */
 }
 
 /* Анимации для переходов */
