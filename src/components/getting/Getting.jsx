@@ -225,134 +225,112 @@ const ActionButton = styled(Button)(({ theme }) => ({
 const StepCard = styled(Card)(({ theme }) => ({
   background: 'rgba(20, 20, 30, 0.7)',
   backdropFilter: 'blur(14px)',
-  borderRadius: '1.5vw',
+  borderRadius: '16px',
   border: '1px solid rgba(255, 215, 0, 0.4)',
   boxShadow: '0 0.5vw 1.5vw rgba(0, 0, 0, 0.5), 0 0 1.5vw rgba(255, 215, 0, 0.4)',
   transition: 'all 0.3s ease',
   transform: 'translateZ(0)',
-  width: '20vw',
-  minHeight: '20vw',
+  width: '350px',
+  height: '300px',
   display: 'flex',
   flexDirection: 'column',
   '&:hover': {
-    transform: 'translateY(-0.6vw) scale(1.03)',
-    boxShadow: '0 0.8vw 2vw rgba(0, 0, 0, 0.6), 0 0 2vw rgba(255, 215, 0, 0.6)',
+    transform: 'translateY(-8px) scale(1.03)',
+    boxShadow: '0 12px 24px rgba(0, 0, 0, 0.6), 0 0 24px rgba(255, 215, 0, 0.6)',
     borderColor: 'rgba(255, 215, 0, 0.7)',
   },
-  [theme.breakpoints.down('md')]: {
-    margin: '1vw auto',
-  },
   [theme.breakpoints.down('sm')]: {
-    width: '80vw',
-    minHeight: '40vw',
-    margin: '2vw auto',
-    borderRadius: '3vw',
+    width: '90%',
+    maxWidth: '350px',
+    height: 'auto',
+    minHeight: '300px',
+    margin: '16px auto',
+    borderRadius: '12px',
     border: '1px solid rgba(255, 215, 0, 0.5)',
-    boxShadow: '0 0 4vw rgba(0, 0, 0, 0.4), 0 0 3vw rgba(255, 215, 0, 0.3)',
+    boxShadow: '0 0 16px rgba(0, 0, 0, 0.4), 0 0 12px rgba(255, 215, 0, 0.3)',
     '&:hover': {
-      transform: 'translateY(-2vw) scale(1.02)',
-      boxShadow: '0 0 6vw rgba(0, 0, 0, 0.5), 0 0 4vw rgba(255, 215, 0, 0.5)',
-    },
-  },
-  '@media (min-width: 1920px)': {
-    width: '400px',
-    minHeight: '400px',
-    borderRadius: '25px',
-    boxShadow: '0 10px 30px rgba(0, 0, 0, 0.6), 0 0 30px rgba(255, 215, 0, 0.5)',
-    '&:hover': {
-      transform: 'translateY(-12px) scale(1.05)',
-      boxShadow: '0 15px 40px rgba(0, 0, 0, 0.7), 0 0 40px rgba(255, 215, 0, 0.7)',
+      transform: 'translateY(-8px) scale(1.02)',
+      boxShadow: '0 16px 24px rgba(0, 0, 0, 0.5), 0 0 16px rgba(255, 215, 0, 0.5)',
     },
   },
 }));
 
 const StepNumber = styled(Typography)(({ theme }) => ({
   fontFamily: '"Exo 2", sans-serif',
-  fontSize: '2vw',
+  fontSize: '24px',
   fontWeight: 800,
   color: '#ffd700',
-  marginBottom: '0.8vw',
-  textShadow: '0 0 1vw rgba(255, 215, 0, 0.7)',
-  [theme.breakpoints.down('md')]: {
-    fontSize: '2.5vw',
-  },
+  marginBottom: '8px',
+  textShadow: '0 0 8px rgba(255, 215, 0, 0.7)',
   [theme.breakpoints.down('sm')]: {
-    fontSize: '5vw',
-    marginBottom: '2vw',
+    fontSize: '20px',
+    marginBottom: '8px',
   },
   '@media (min-width: 1920px)': {
-    fontSize: '2.5rem',
+    fontSize: '28px',
     marginBottom: '12px',
-    textShadow: '0 0 20px rgba(255, 215, 0, 0.8)',
+    textShadow: '0 0 12px rgba(255, 215, 0, 0.8)',
   },
 }));
 
 const StepTitle = styled(Typography)(({ theme }) => ({
   fontFamily: '"Exo 2", sans-serif',
-  fontSize: '1.3vw',
+  fontSize: '18px',
   fontWeight: 700,
   color: '#fff',
-  marginBottom: '0.8vw',
-  [theme.breakpoints.down('md')]: {
-    fontSize: '1.5vw',
-  },
+  marginBottom: '8px',
   [theme.breakpoints.down('sm')]: {
-    fontSize: '4vw',
-    marginBottom: '2vw',
+    fontSize: '16px',
+    marginBottom: '8px',
   },
   '@media (min-width: 1920px)': {
-    fontSize: '1.6rem',
+    fontSize: '20px',
     marginBottom: '12px',
   },
 }));
 
 const StepDescription = styled(Typography)(({ theme }) => ({
   fontFamily: '"Inter", sans-serif',
-  fontSize: '0.9vw',
+  fontSize: '14px',
   color: '#e0e0e0',
   wordWrap: 'break-word',
   overflow: 'hidden',
-  [theme.breakpoints.down('md')]: {
-    fontSize: '1.1vw',
-  },
+  maxHeight: '100px',
+  lineHeight: '1.4',
   [theme.breakpoints.down('sm')]: {
-    fontSize: '3vw',
+    fontSize: '13px',
+    maxHeight: '120px',
   },
   '@media (min-width: 1920px)': {
-    fontSize: '1.1rem',
+    fontSize: '15px',
   },
 }));
 
 const StepIcon = styled(Box)(({ theme }) => ({
   color: '#ffd700',
-  marginBottom: '1vw',
+  marginBottom: '12px',
   '& svg': {
-    fontSize: '2vw',
-    filter: 'drop-shadow(0 0 0.8vw rgba(255, 215, 0, 0.6))',
-  },
-  [theme.breakpoints.down('md')]: {
-    '& svg': {
-      fontSize: '2.5vw',
-    },
+    fontSize: '24px',
+    filter: 'drop-shadow(0 0 6px rgba(255, 215, 0, 0.6))',
   },
   [theme.breakpoints.down('sm')]: {
-    marginBottom: '3vw',
+    marginBottom: '8px',
     '& svg': {
-      fontSize: '6vw',
-      filter: 'drop-shadow(0 0 2vw rgba(255, 215, 0, 0.5))',
+      fontSize: '20px',
+      filter: 'drop-shadow(0 0 4px rgba(255, 215, 0, 0.5))',
     },
   },
   '@media (min-width: 1920px)': {
-    marginBottom: '15px',
+    marginBottom: '16px',
     '& svg': {
-      fontSize: '2.5rem',
-      filter: 'drop-shadow(0 0 15px rgba(255, 215, 0, 0.7))',
+      fontSize: '28px',
+      filter: 'drop-shadow(0 0 8px rgba(255, 215, 0, 0.7))',
     },
   },
 }));
 
 const CustomCardContent = styled(MuiCardContent)(({ theme }) => ({
-  padding: '2vw',
+  padding: '20px',
   textAlign: 'center',
   display: 'flex',
   flexDirection: 'column',
@@ -360,10 +338,7 @@ const CustomCardContent = styled(MuiCardContent)(({ theme }) => ({
   justifyContent: 'space-between',
   height: '100%',
   [theme.breakpoints.down('sm')]: {
-    padding: '4vw',
-  },
-  '@media (min-width: 1920px)': {
-    padding: '30px',
+    padding: '16px',
   },
 }));
 
@@ -605,10 +580,8 @@ const Getting = () => {
         >
 
           <Grid item xs={12} md={4} lg={3} sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'flex-start' } }}>
-            <MapImage src={map} alt="Map" ref={mapRef} 
-            
+            <MapImage src={map} alt="Map" ref={mapRef}
               sx={{ marginLeft: { xs: '0px', sm: '100px' } }}
-
             />
           </Grid>
           <Grid item xs={12} md={8} lg={9} sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'flex-end' } }}>
