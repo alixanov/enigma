@@ -32,7 +32,8 @@ const GettingContainer = styled(Box)(({ theme }) => ({
     padding: '3vw 1.5vw',
   },
   [theme.breakpoints.down('sm')]: {
-    padding: '2.5vw 1vw',
+    padding: '4vw 2vw',
+    minHeight: 'auto',
   },
   '@media (min-width: 1920px)': {
     padding: '80px 40px',
@@ -48,9 +49,9 @@ const Particle = styled(Box)(({ theme }) => ({
   zIndex: 2,
   boxShadow: '0 0 1.5vw #ffd700, 0 0 1vw #ff4500',
   [theme.breakpoints.down('sm')]: {
-    width: '4px',
-    height: '4px',
-    boxShadow: '0 0 10px #ffd700, 0 0 8px #ff4500',
+    width: '3px',
+    height: '3px',
+    boxShadow: '0 0 8px #ffd700, 0 0 6px #ff4500',
   },
   '@media (min-width: 1920px)': {
     width: '10px',
@@ -69,9 +70,9 @@ const GlowRay = styled(Box)(({ theme }) => ({
   transformOrigin: 'bottom',
   boxShadow: '0 0 1.5vw #ffd700',
   [theme.breakpoints.down('sm')]: {
-    width: '2px',
-    height: '80px',
-    boxShadow: '0 0 15px #ffd700',
+    width: '1.5px',
+    height: '60px',
+    boxShadow: '0 0 10px #ffd700',
   },
   '@media (min-width: 1920px)': {
     width: '4px',
@@ -100,7 +101,6 @@ const ContentWrapper = styled(Box)(({ theme }) => ({
 const MapImage = styled('img')(({ theme }) => ({
   width: '100%',
   maxWidth: '25vw',
-  marginLeft:"100px",
   borderRadius: '1.5vw',
   border: '3px solid rgba(255, 215, 0, 0.6)',
   boxShadow: '0 0 2vw rgba(255, 215, 0, 0.6), 0 0 3vw rgba(255, 69, 0, 0.4)',
@@ -108,8 +108,11 @@ const MapImage = styled('img')(({ theme }) => ({
     maxWidth: '40vw',
   },
   [theme.breakpoints.down('sm')]: {
-    maxWidth: '100%',
-    marginBottom: '2vw',
+    maxWidth: '80vw',
+    marginBottom: '4vw',
+    borderRadius: '3vw',
+    border: '2px solid rgba(255, 215, 0, 0.6)',
+    boxShadow: '0 0 4vw rgba(255, 215, 0, 0.5), 0 0 6vw rgba(255, 69, 0, 0.3)',
   },
   '@media (min-width: 1920px)': {
     maxWidth: '600px',
@@ -137,8 +140,8 @@ const SectionTitle = styled(Typography)(({ theme }) => ({
     marginBottom: '2vw',
   },
   [theme.breakpoints.down('sm')]: {
-    fontSize: '6vw',
-    marginBottom: '1.5vw',
+    fontSize: '8vw',
+    marginBottom: '4vw',
   },
   '@media (min-width: 1920px)': {
     fontSize: '5.5rem',
@@ -156,7 +159,8 @@ const DescriptionText = styled(Typography)(({ theme }) => ({
     fontSize: '1.5vw',
   },
   [theme.breakpoints.down('sm')]: {
-    fontSize: '2vw',
+    fontSize: '3.5vw',
+    marginBottom: '3vw',
   },
   '@media (min-width: 1920px)': {
     fontSize: '1.5rem',
@@ -175,7 +179,8 @@ const GoldText = styled(Typography)(({ theme }) => ({
     fontSize: '1.5vw',
   },
   [theme.breakpoints.down('sm')]: {
-    fontSize: '2vw',
+    fontSize: '3.5vw',
+    marginBottom: '4vw',
   },
   '@media (min-width: 1920px)': {
     fontSize: '1.5rem',
@@ -204,8 +209,10 @@ const ActionButton = styled(Button)(({ theme }) => ({
     fontSize: '1.2vw',
   },
   [theme.breakpoints.down('sm')]: {
-    padding: '1.5vw 3vw',
-    fontSize: '2vw',
+    padding: '3vw 6vw',
+    fontSize: '3.5vw',
+    borderRadius: '4vw',
+    marginBottom: '4vw',
   },
   '@media (min-width: 1920px)': {
     padding: '16px 32px',
@@ -232,7 +239,14 @@ const StepCard = styled(Card)(({ theme }) => ({
     margin: '1vw auto',
   },
   [theme.breakpoints.down('sm')]: {
-    margin: '0.5vw auto',
+    margin: '2vw auto',
+    borderRadius: '3vw',
+    border: '1px solid rgba(255, 215, 0, 0.5)',
+    boxShadow: '0 0 4vw rgba(0, 0, 0, 0.4), 0 0 3vw rgba(255, 215, 0, 0.3)',
+    '&:hover': {
+      transform: 'translateY(-2vw) scale(1.02)',
+      boxShadow: '0 0 6vw rgba(0, 0, 0, 0.5), 0 0 4vw rgba(255, 215, 0, 0.5)',
+    },
   },
   '@media (min-width: 1920px)': {
     borderRadius: '25px',
@@ -255,7 +269,8 @@ const StepNumber = styled(Typography)(({ theme }) => ({
     fontSize: '2.5vw',
   },
   [theme.breakpoints.down('sm')]: {
-    fontSize: '3vw',
+    fontSize: '5vw',
+    marginBottom: '2vw',
   },
   '@media (min-width: 1920px)': {
     fontSize: '2.5rem',
@@ -274,7 +289,8 @@ const StepTitle = styled(Typography)(({ theme }) => ({
     fontSize: '1.5vw',
   },
   [theme.breakpoints.down('sm')]: {
-    fontSize: '2vw',
+    fontSize: '4vw',
+    marginBottom: '2vw',
   },
   '@media (min-width: 1920px)': {
     fontSize: '1.6rem',
@@ -290,7 +306,7 @@ const StepDescription = styled(Typography)(({ theme }) => ({
     fontSize: '1.1vw',
   },
   [theme.breakpoints.down('sm')]: {
-    fontSize: '1.5vw',
+    fontSize: '3vw',
   },
   '@media (min-width: 1920px)': {
     fontSize: '1.1rem',
@@ -310,8 +326,10 @@ const StepIcon = styled(Box)(({ theme }) => ({
     },
   },
   [theme.breakpoints.down('sm')]: {
+    marginBottom: '3vw',
     '& svg': {
-      fontSize: '3vw',
+      fontSize: '6vw',
+      filter: 'drop-shadow(0 0 2vw rgba(255, 215, 0, 0.5))',
     },
   },
   '@media (min-width: 1920px)': {
@@ -327,7 +345,7 @@ const CustomCardContent = styled(MuiCardContent)(({ theme }) => ({
   padding: '1.5vw',
   textAlign: 'center',
   [theme.breakpoints.down('sm')]: {
-    padding: '2vw',
+    padding: '4vw',
   },
   '@media (min-width: 1920px)': {
     padding: '25px',
@@ -563,17 +581,28 @@ const Getting = () => {
         <DescriptionText ref={descRef}>{descWords}</DescriptionText>
         <GoldText ref={goldRef}>{goldWords}</GoldText>
         <ActionButton ref={buttonRef}>Join the Adventure</ActionButton>
-        <Grid container spacing={3} justifyContent="space-between" alignItems="center">
-          <Grid item xs={12} md={4} lg={3} sx={{ display: 'flex', justifyContent: 'flex-start' }}>
-            <MapImage src={map} alt="Map" ref={mapRef} />
+        <Grid
+          container
+          spacing={{ xs: 2, sm: 2, md: 3 }}
+          justifyContent="space-between"
+          alignItems="center"
+          sx={{ marginLeft: { xs: '30px', sm: '0px' } }}
+        >
+
+          <Grid item xs={12} md={4} lg={3} sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'flex-start' } }}>
+            <MapImage src={map} alt="Map" ref={mapRef}
+            
+              sx={{ marginLeft: { xs: '0px', sm: '100px' } }}
+
+            />
           </Grid>
-          <Grid item xs={12} md={8} lg={9} sx={{ display: 'flex', justifyContent: 'flex-end' }}>
-            <Grid container spacing={2} sx={{ maxWidth: '50vw', flexWrap: 'wrap' }}>
+          <Grid item xs={12} md={8} lg={9} sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'flex-end' } }}>
+            <Grid container spacing={{ xs: 2, sm: 2, md: 2 }} sx={{ maxWidth: { xs: '90vw', md: '50vw' }, flexWrap: 'wrap' }}>
               {steps.map((step, index) => (
                 <Grid item xs={12} sm={6} md={6} lg={6} key={index}>
                   <StepCard
                     ref={(el) => (cardRefs.current[index] = el)}
-                    sx={{ maxWidth: '20vw', margin: '0 auto' }}
+                    sx={{ maxWidth: { xs: '80vw', md: '20vw' }, margin: '0 auto' }}
                   >
                     <CustomCardContent>
                       <StepIcon>{step.icon}</StepIcon>
@@ -585,8 +614,6 @@ const Getting = () => {
                 </Grid>
               ))}
             </Grid>
-
-
           </Grid>
         </Grid>
       </ContentWrapper>
