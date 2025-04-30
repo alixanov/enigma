@@ -230,6 +230,7 @@ const Main = () => {
         </PlayButton>
       </MainContainer>
 </BigContainer>
+
   );
 };
 
