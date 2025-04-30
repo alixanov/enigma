@@ -222,7 +222,7 @@ const Main = () => {
         <PlayButton
           ref={buttonRef}
           variant="contained"
-          href="https://discord.com" // Замените на реальную ссылку
+          href="https://x.com/enigmarpg_sol" // Замените на реальную ссылку
           target="_blank"
           rel="noopener noreferrer"
         >
